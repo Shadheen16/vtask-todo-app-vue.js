@@ -2,7 +2,9 @@
   <div class="text-center">
       <div class="sm:flex mb-1 text-3xl sm:text-4xl sm:justify-between">
         <h1>{{title}}</h1>
-        <Button @toggle-add-task="$emit('toggle-add-task')" :text="showAddtask ? 'Close' : 'Add Task'"/>
+        <Button @click="showAddtask()" v-show="!show" @toggle-add-task="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add Task'"
+      :color="showAddTask ? 'red' : 'green'"  />
+        <Button @click="showAddtask()" v-show="show" @toggle-add-task="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add Task'"/>
       </div>  
   </div>
 </template>
@@ -10,6 +12,12 @@
 <script>
 import Button from './Button'
 export default{
+  data() {
+    return{
+       show: false
+    }
+   
+  },
     name:'Header',
     props: {
         title: String,
@@ -17,7 +25,13 @@ export default{
     },
     components: {
     Button,
+  },
+  methods: {
+    showAddtask(){
+      this.show = !this.show
+    }
   }
+
 }
 </script>
 

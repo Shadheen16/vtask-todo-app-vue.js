@@ -15,7 +15,7 @@
     </div>
     <div class="form-control form-control-check">
       <label>Set Reminder</label>
-      <input  type='checkbox' value="boolean" class="transform " v-model="reminder" data-on-color:bg-yellow-600 name="reminder">
+      <input  type='checkbox' value="boolean" class="" v-model="reminder" data-on-color:bg-yellow-600 name="reminder">
     </div>
 
     <input type="submit" value="Save Task" class="w-full transform bg-black bg-opacity-60 hover:scale-95 hover:bg-yellow-600 delay-300 duration-300 ease-in-out mt-4 py-1 md:py-2 rounded   text-white cursor-pointer"/>
