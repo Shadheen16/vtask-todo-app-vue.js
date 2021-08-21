@@ -12,3 +12,31 @@
         src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
     }
 }
+
+@layer base {
+     label {
+        @apply inline-block;
+    } 
+} 
+
+@layer components {
+   
+  .label { 
+    @apply inline-block ;
+ }
+
+ .add-form {
+    @apply mb-0;
+  }
+  .form-control {
+    @apply my-2;
+  }
+  
+  .form-control-check {
+    @apply flex mt-4 ml-1 justify-items-center justify-between;
+  } 
+  .taskInput{
+    @apply w-full h-7 sm:h-10 transform mt-1 px-2 py-3 rounded bg-white bg-opacity-50 shadow border-yellow-900 hover:scale-105 cursor-pointer transition delay-75 duration-300 ease-in-out;
+  }
+
+  }
